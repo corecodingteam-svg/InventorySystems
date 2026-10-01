@@ -39,7 +39,7 @@ export const caseStudies: CaseStudy[] = [
     technologies: ['React', 'Node.js', 'PostgreSQL', 'Charts', 'Role-based Auth'],
     outcome: 'Every print job tracked from quotation to delivery',
     metrics: [{ value: '150+', label: 'Jobs managed' }, { value: '7', label: 'Job stages tracked' }, { value: 'Role-based', label: 'Admin access' }],
-    image: images.manufacturing,
+    image: { kind: 'web', seed: 18, alt: 'MotiPaper admin dashboard showing total jobs, active jobs, jobs by status and jobs created per month', src: '/case-studies/motipaper.jpg' },
     screenshots: shots(),
     challenge: 'Job cards, paper rates, quotations, proofs and invoices were handled across separate files and paper, making it hard to see what was in production, what awaited approval and what had been billed.',
     solution: 'MotiPaper is an admin console with a live dashboard and modules for job cards, external jobs, tax invoice cards, proofs, quotations, clients, staff, inventory, reports and paper rates. Each job moves through draft, approval, print, finishing, ready and delivered, with role-based access for admins and sub-admins.',
