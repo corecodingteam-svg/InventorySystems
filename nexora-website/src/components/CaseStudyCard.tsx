@@ -7,7 +7,7 @@ import { cn } from '../lib/utils'
 export function CaseStudyCard({ study, featured }: { study: CaseStudy; featured?: boolean }) {
   return (
     <Link to={`/case-studies/${study.slug}`} className={cn('card card-hover group flex overflow-hidden', featured ? 'flex-col lg:grid lg:grid-cols-2' : 'h-full flex-col')}>
-      <div className={cn('relative overflow-hidden bg-ink', featured ? 'aspect-[16/10] lg:aspect-auto lg:min-h-[420px]' : 'aspect-[16/10]')}>
+      <div className={cn('relative overflow-hidden bg-ink', featured ? 'aspect-[5/3] lg:self-center' : 'aspect-[5/3]')}>
         <div className="h-full w-full transition duration-500 group-hover:scale-105"><Art image={study.image} /></div>
         <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-ink backdrop-blur">{study.industry}</span>
       </div>

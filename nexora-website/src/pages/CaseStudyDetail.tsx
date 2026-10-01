@@ -21,7 +21,7 @@ export default function CaseStudyDetail() {
     <>
       <PageHero eyebrow={`${c.industry} · ${c.client}`} title={c.title} description={c.summary} crumbs={[{ label: 'Case Studies', to: '/case-studies' }, { label: c.title }]} />
       <section className="container-x -mt-10 relative z-10">
-        <ImageReveal className="aspect-[16/9] overflow-hidden rounded-2xl shadow-2xl sm:aspect-[21/9]"><Art image={c.image} /></ImageReveal>
+        <ImageReveal className={`overflow-hidden rounded-2xl shadow-2xl ${c.image.src?.startsWith('/') ? 'mx-auto aspect-[5/3] max-w-4xl' : 'aspect-[16/9] sm:aspect-[21/9]'}`}><Art image={c.image} /></ImageReveal>
         <dl className="mt-8 grid grid-cols-3 gap-4 rounded-xl border border-slate-200 bg-white p-5 sm:p-8">
           {c.metrics.map((m) => <div key={m.label} className="flex flex-col-reverse text-center"><dt className="text-xs text-slate-500 sm:text-sm">{m.label}</dt><dd className="font-display text-2xl font-bold text-brand sm:text-4xl">{m.value}</dd></div>)}
         </dl>
