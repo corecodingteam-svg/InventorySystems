@@ -26,8 +26,8 @@ export const company: CompanyConfig = {
   primaryColor: '#4f46e5',
   secondaryColor: '#0ea5e9',
   accentColor: '#22d3ee',
-  email: 'hello@advaitamaa.example',
-  phone: '+91 XXX XXX XXXX',
+  email: 'info@advaitamaa.com',
+  phone: '+91 9919355166',
   address: 'Jaipur, India',
   foundedYear: 2014,
   socialLinks: [
