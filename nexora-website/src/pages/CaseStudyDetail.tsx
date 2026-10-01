@@ -13,7 +13,7 @@ import { useSeo } from '../hooks/useSeo'
 export default function CaseStudyDetail() {
   const { slug = '' } = useParams()
   const c = getCaseStudy(slug)
-  useSeo({ title: `${c?.title ?? 'Case study'} — Nexora Technologies`, description: c?.summary ?? '', path: `/case-studies/${slug}` })
+  useSeo({ title: `${c?.title ?? 'Case study'} — Advaitamaa`, description: c?.summary ?? '', path: `/case-studies/${slug}` })
   if (!c) return <Navigate to="/404" replace />
   const more = caseStudies.filter((x) => x.slug !== slug).slice(0, 2)
 

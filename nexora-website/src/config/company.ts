@@ -20,13 +20,13 @@ export interface CompanyConfig {
 
 /** Central brand configuration — replace these values to rebrand the site. */
 export const company: CompanyConfig = {
-  companyName: 'Nexora Technologies',
+  companyName: 'Advaitamaa',
   tagline: 'Engineering Digital Products That Move Businesses Forward',
   logo: null, // set to an image URL to replace the default monogram
   primaryColor: '#4f46e5',
   secondaryColor: '#0ea5e9',
   accentColor: '#22d3ee',
-  email: 'hello@nexora.example',
+  email: 'hello@advaitamaa.example',
   phone: '+91 XXX XXX XXXX',
   address: 'Jaipur, India',
   foundedYear: 2014,

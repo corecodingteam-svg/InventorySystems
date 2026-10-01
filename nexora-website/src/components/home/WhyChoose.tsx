@@ -8,7 +8,7 @@ export function WhyChoose() {
   return (
     <section className="section" aria-labelledby="why-title">
       <div className="container-x">
-        <SectionHeading eyebrow="Why Nexora" title={<span id="why-title">Technology Partner. Not Just a Vendor.</span>} description="We take ownership of outcomes. Figures below are editable placeholders." />
+        <SectionHeading eyebrow="Why Advaitamaa" title={<span id="why-title">Technology Partner. Not Just a Vendor.</span>} description="We take ownership of outcomes. Figures below are editable placeholders." />
         <dl className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4">
           {whyStats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.06} className="card flex flex-col-reverse bg-slate-50 p-5 sm:p-7">

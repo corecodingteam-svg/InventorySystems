@@ -8,7 +8,7 @@ export interface SeoConfig {
   type?: 'website' | 'article'
 }
 
-export const siteUrl = 'https://www.nexora.example' // canonical URL placeholder
+export const siteUrl = 'https://www.advaitamaa.example' // canonical URL placeholder
 export const defaultImage = `${siteUrl}/og-image.png`
 
 export const pageSeo = {

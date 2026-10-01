@@ -12,7 +12,7 @@ import { useSeo } from '../hooks/useSeo'
 export default function ArticleDetail() {
   const { slug = '' } = useParams()
   const a = getArticle(slug)
-  useSeo({ title: `${a?.title ?? 'Article'} — Nexora Insights`, description: a?.excerpt ?? '', path: `/insights/${slug}`, type: 'article' })
+  useSeo({ title: `${a?.title ?? 'Article'} — Advaitamaa Insights`, description: a?.excerpt ?? '', path: `/insights/${slug}`, type: 'article' })
   if (!a) return <Navigate to="/404" replace />
   const more = articles.filter((x) => x.slug !== slug && x.category === a.category).concat(articles.filter((x) => x.slug !== slug && x.category !== a.category)).slice(0, 3)
 

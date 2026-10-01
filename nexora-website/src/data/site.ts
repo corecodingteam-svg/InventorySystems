@@ -46,7 +46,7 @@ export const showcase = [
 
 export const about = {
   heading: 'We Turn Complex Technology Into Simple Business Solutions.',
-  story: 'Founded in 2014 by a small group of engineers frustrated with over-engineered software, Nexora has grown into a global team that ships production systems for startups and enterprises alike. We believe great technology should disappear into the business it serves.',
+  story: 'Founded in 2014 by a small group of engineers frustrated with over-engineered software, Advaitamaa has grown into a global team that ships production systems for startups and enterprises alike. We believe great technology should disappear into the business it serves.',
   mission: 'To help businesses use technology to create better products, smarter operations and stronger customer experiences.',
   vision: 'To be the most trusted engineering partner for ambitious companies building the next generation of digital products.',
   philosophy: 'Start simple. Measure everything. Automate the boring parts. Leave every codebase better than we found it.',

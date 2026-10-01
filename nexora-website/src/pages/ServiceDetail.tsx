@@ -17,7 +17,7 @@ import { useSeo } from '../hooks/useSeo'
 export default function ServiceDetail() {
   const { slug = '' } = useParams()
   const service = getService(slug)
-  useSeo({ title: `${service?.title ?? 'Service'} — Nexora Technologies`, description: service?.overview ?? '', path: `/services/${slug}` })
+  useSeo({ title: `${service?.title ?? 'Service'} — Advaitamaa`, description: service?.overview ?? '', path: `/services/${slug}` })
   if (!service) return <Navigate to="/404" replace />
   const related = caseStudies.filter((c) => service.relatedCaseStudies.includes(c.slug))
   const others = services.filter((s) => s.slug !== slug)
