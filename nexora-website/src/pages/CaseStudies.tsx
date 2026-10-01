@@ -38,7 +38,7 @@ export default function CaseStudies() {
 
   return (
     <>
-      <PageHero eyebrow="Case studies" title="Selected work and measurable outcomes" description="Fictional placeholder projects — swap in your real portfolio." crumbs={[{ label: 'Case Studies' }]} />
+      <PageHero eyebrow="Case studies" title="Selected work and measurable outcomes" description="Selected projects across healthcare, manufacturing, retail and enterprise." crumbs={[{ label: 'Case Studies' }]} />
       <section className="section !pt-12">
         <div className="container-x">
           <form role="search" onSubmit={(e) => e.preventDefault()} className="grid gap-3 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_auto]">
