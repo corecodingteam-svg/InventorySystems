@@ -1,0 +1,16 @@
+# Inventory Flutter web client. Pin a Flutter release whose Dart/analyzer matches
+# pubspec.lock (Flutter 3.47 breaks the pinned build_runner/freezed toolchain).
+ARG FLUTTER_VERSION=3.35.7
+FROM ghcr.io/cirruslabs/flutter:${FLUTTER_VERSION} AS build
+ARG API_BASE_URL=https://inventory.advaitamaa.com/api/v1
+WORKDIR /app
+COPY pubspec.yaml pubspec.lock ./
+RUN flutter pub get
+COPY . .
+RUN dart run build_runner build --delete-conflicting-outputs \
+ && flutter build web --release --dart-define=API_BASE_URL=${API_BASE_URL}
+
+FROM nginx:1.27-alpine
+RUN printf 'server {\n listen 80;\n root /usr/share/nginx/html;\n index index.html;\n location / { try_files $uri $uri/ /index.html; }\n}\n' > /etc/nginx/conf.d/default.conf
+COPY --from=build /app/build/web /usr/share/nginx/html
+EXPOSE 80

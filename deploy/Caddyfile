@@ -1,0 +1,30 @@
+{
+	# Let's Encrypt account email (expiry notices) and CA.
+	# Production CA by default; setup.sh --staging switches to the Let's Encrypt staging CA.
+	email {$ACME_EMAIL}
+	acme_ca {$ACME_CA}
+}
+
+# Marketing website
+www.advaitamaa.com {
+	redir https://advaitamaa.com{uri} permanent
+}
+
+advaitamaa.com {
+	encode gzip zstd
+	reverse_proxy website:80
+}
+
+# Inventory software (Flutter web + NestJS API on one origin)
+inventory.advaitamaa.com {
+	encode gzip zstd
+
+	# Swagger is for development; do not expose it publicly.
+	@docs path /api/docs*
+	respond @docs 404
+
+	@api path /api/* /health /ready
+	reverse_proxy @api backend:3000
+
+	reverse_proxy inventory-web:80
+}
